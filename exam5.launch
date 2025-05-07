@@ -1,13 +1,32 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
-    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-        <listEntry value="/exam/src/exam/exam5.java"/>
-    </listAttribute>
-    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
-        <listEntry value="1"/>
-    </listAttribute>
-    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="exam.exam5"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="exam"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="exam"/>
-</launchConfiguration>
+package exam;
+
+import exam.Rectangle;
+
+class Rectangle {
+    int length;
+    int breadth;
+
+    Rectangle() {
+        length = 1;
+        breadth = 1;
+    }
+
+    Rectangle(int l, int b) {
+        length = l;
+        breadth = b;
+    }
+
+    int getArea() {
+        return length * breadth;
+    }
+}
+
+public class exam5 {
+    public static void main(String[] args) {
+        Rectangle r1 = new Rectangle();
+        Rectangle r2 = new Rectangle(5, 10);
+
+        System.out.println("Area (default): " + r1.getArea());
+        System.out.println("Area (5,10): " + r2.getArea());
+    }
+}
