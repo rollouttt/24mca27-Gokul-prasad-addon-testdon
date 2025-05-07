@@ -1,13 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
-    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-        <listEntry value="/exam/src/exam/exam2.java"/>
-    </listAttribute>
-    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
-        <listEntry value="1"/>
-    </listAttribute>
-    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="exam.exam2"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="exam"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="exam"/>
-</launchConfiguration>
+package exam;
+
+public class exam2 {
+    public static void main(String[] args) {
+        System.out.print("Perfect numbers between 1 and 1000: ");
+        for (int num = 1; num <= 1000; num++) {
+            int sum = 0;
+            for (int i = 1; i < num; i++) {
+                if (num % i == 0) {
+                    sum = sum + i;
+                }
+            }
+            if (sum == num) {
+                System.out.print(num + " ");
+            }
+        }
+    }
+}
