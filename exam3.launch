@@ -1,13 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
-    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-        <listEntry value="/exam/src/exam/exam3.java"/>
-    </listAttribute>
-    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
-        <listEntry value="1"/>
-    </listAttribute>
-    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="exam.exam3"/>
-    <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="exam"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="exam"/>
-</launchConfiguration>
+package exam;
+
+public class exam3 {
+	
+    public static void main(String[] args) {
+        int[] arr = {10, 20, 50, 30, 40};
+        int largest = arr[0];
+        int second = arr[0];
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > largest) {
+                second = largest;
+                largest = arr[i];
+            } else if (arr[i] > second && arr[i] != largest) {
+                second = arr[i];
+            }
+        }
+
+        System.out.println("Second largest element = " + second);
+    }
+}
